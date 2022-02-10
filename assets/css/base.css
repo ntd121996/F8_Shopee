@@ -1,8 +1,10 @@
 
 :root {
+    --primary-color :rgb(238, 77, 45);    
     --white-color : #fff;
     --black-color : #000;
     --text-color : #333;
+    --border-color : #dbdbdb
 }
 * {
     box-sizing: inherit;
@@ -24,4 +26,58 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+}
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    outline: none;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+.btn.btn--size-s {
+    height: 30px;
+    size: 1.2rem;
+    padding: 0 8px;
+
+}
+
+.btn.btn--disabled {
+    cursor: default;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+    
 }
