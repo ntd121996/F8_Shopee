@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if( btn.innerHTML == 'Đăng nhập')
             {
                 btn.addEventListener('click', (e) => {
-                    console.log('click');
                     loginForm.style.display = 'block';
                     regForm.style.display = 'none';
                 })
